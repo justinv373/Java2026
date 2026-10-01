@@ -5,7 +5,7 @@ class Main {
 	}
 
 	void print(String message){
-    System.out.println(message);
+    	System.out.println(message);
 }
 
 	double temp(double fahrenheit){
@@ -14,8 +14,8 @@ class Main {
 }
 
 	double sphereVolume(double radius){
-    double result = (4.0 / 3.0) * 3.14159 * (radius * radius * radius);
-    return result;
+    	double result = (4.0 / 3.0) * 3.14159 * (radius * radius * radius);
+    	return result;
 }
 
 	double coneVolume(double radius, double height){
@@ -32,7 +32,7 @@ class Main {
 void init(){
 
 	String message = "Hello World! The print function works.";
-	System.out.println(message);
+		System.out.println(message);
 
 	System.out.println("Enter the temperature: ");
 		double t = Input.readDouble();
@@ -53,7 +53,7 @@ void init(){
     	double h = Input.readDouble();
 
     double volume1 = coneVolume(r, h);
-    	System.out.println("The volume of the cone is " + volume);
+    	System.out.println("The volume of the cone is " + volume1);
 
 	System.out.println("Enter x1: ");
     	double x1 = Input.readDouble();
