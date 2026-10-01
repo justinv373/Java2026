@@ -8,18 +8,18 @@ class Main {
     	System.out.println(message);
 }
 
-	double temp(double fahrenheit){
+	double FtoC(double fahrenheit){
 		double result = (fahrenheit-32)*(5.0/9.0);
 		return result;
 }
 
 	double sphereVolume(double radius){
-    	double result = (4.0 / 3.0) * 3.14159 * (radius * radius * radius);
+    	double result = (4.0 / 3.0) * 3.14159 * (Math.pow(radius,3));
     	return result;
 }
 
-	double coneVolume(double radius, double height){
-    	double result = (1.0 / 3.0) * 3.14159 * (radius * radius) * height;
+	double coneVolume(double radiuscone, double height){
+    	double result = (1.0 / 3.0) * 3.14159 * (Math.pow(radiuscone,2)) * height;
     	return result;
 }
 
@@ -37,7 +37,7 @@ void init(){
 	System.out.println("Enter the temperature: ");
 		double t = Input.readDouble();
 
-	double tem = temp(t);
+	double tem = FtoC(t);
 		System.out.println("Temperature in celsius is " + tem);
 
 	System.out.println("Enter the radius of the sphere: ");
@@ -52,7 +52,7 @@ void init(){
     System.out.println("Enter the height of the cone: ");
     	double h = Input.readDouble();
 
-    double volume1 = coneVolume(r, h);
+    double volume1 = coneVolume(r1, h);
     	System.out.println("The volume of the cone is " + volume1);
 
 	System.out.println("Enter x1: ");
