@@ -27,14 +27,73 @@ String creditCardType(String cardnum){
 
 String pigLatin(String word){
   String firstletter = word.substring(0,1);
-  int first = word.indexOf(firstletter);
-  String afterfirst = word.substring(first + 1)
-  String result = afterfirst + first + "ay"
+  String afterfirst = word.substring(1);
+  String result = afterfirst + firstletter + "ay";
   return result;
 }
 
+String nycLocate(String zipCode) {
+  String prefix = zipCode.substring(0, 3);
 
+  if(prefix.equals("100") || prefix.equals("101") || prefix.equals("102"))
+    return "Manhattan";
+  else if(prefix.equals("103"))
+    return "Staten Island";
+  else if(prefix.equals("104"))
+    return "Bronx";
+  else if(prefix.equals("112"))
+    return "Brooklyn";
+  else if(prefix.equals("111") || prefix.equals("113") || prefix.equals("114")) 
+    return "Queens";
+  else 
+    return "Unknown Borough";
+}
 
+String getMonth(String date){
+  String monthNum = date.substring(0, 2);
+
+  if(monthNum.equals("01"))
+    return "January";
+  else if(monthNum.equals("02"))
+    return "February";
+  else if(monthNum.equals("03"))
+    return "March";
+  else if(monthNum.equals("04"))
+    return "April";
+  else if(monthNum.equals("05"))
+    return "May";
+  else if(monthNum.equals("06"))
+    return "June";
+  else if(monthNum.equals("07"))
+    return "July";
+  else if(monthNum.equals("08"))
+    return "August";
+  else if(monthNum.equals("09"))
+    return "September";
+  else if(monthNum.equals("10"))
+    return "October";
+  else if(monthNum.equals("11"))
+    return "November";
+  else if(monthNum.equals("12"))
+    return "December";
+  else 
+    return "Invalid Month";
+}
+
+boolean validatePswd(String password){
+  if(password.length() < 5 || password.length() > 8)
+    return false;
+  else if(password.contains("^"))
+    return false;
+  else if(password.contains("*"))
+    return false;
+  else if(password.contains("("))
+    return false;
+  else if(password.contains(")"))
+    return false;
+  else
+    return true;
+  }
 }
   
   
