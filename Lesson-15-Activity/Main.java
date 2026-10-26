@@ -26,14 +26,15 @@ class Main {
   }
 
   int fib(int N){
-    fib1 = 0;
-    fib2 = 1;
-    for(){
-      next.fib = fib1 + fib2;
+    int fib1 = 0;
+    int fib2 = 1;
+    for(int i = 0; i < N; i++){
+      System.out.print(fib1 + " ");
+      int next = fib1 + fib2;
       fib1 = fib2;
-      fib2 = next.fib;
+      fib2 = next;
     }
-  }
+}
 
   
   
