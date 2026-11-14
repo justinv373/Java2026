@@ -40,14 +40,13 @@ class Main {
     print("Correct!");
 }
 
-  int GCF(int a, int b){
-    while(b != 0){
-      int factor = b;
-      b = a%b;
-      a = factor;
-    }
-    return a;
+  int GCF(int num1, int num2){
+    int gcf = num1;
+    while(!(num1%gcf == 0 && num2%gcf == 0)){
+      gcf--;
   }
+  return gcf;
+}
 
   }
 
